@@ -1,0 +1,12 @@
+{
+  "name": "akshara-translator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kannada to Devanagari Transliteration Web Application",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "backend": ".venv\\Scripts\\python -m uvicorn backend.main:app --reload --port 8000"
+  }
+}

@@ -1,0 +1,78 @@
+==================================================
+  KANNADA TO DEVANAGARI TRANSLITERATION TEST SUITE
+==================================================
+
+Test #1: Basic Greeting -> PASSED
+  Input:    ನಮಸ್ಕಾರ, ಎಲ್ಲರಿಗೂ ಸುಸ್ವಾಗತ.
+  Output:   नमस्कार, ऎल्लरिगू सुस्वागत।
+  Expected: नमस्कार, ऎल्लरिगू सुस्वागत।
+  Stats:    Chars: In=27, Out=27 | Overrides: []
+--------------------------------------------------
+Test #2: State Name -> PASSED
+  Input:    ಕರ್ನಾಟಕ
+  Output:   कर्नाटक
+  Expected: कर्नाटक
+  Stats:    Chars: In=7, Out=7 | Overrides: [{'kannada': 'ಕರ್ನಾಟಕ', 'devanagari': 'कर्नाटक'}]
+--------------------------------------------------
+Test #3: City Name (Override Check) -> PASSED
+  Input:    ಬೆಂಗಳೂರು
+  Output:   बेंगलूरु
+  Expected: बेंगलूरु
+  Stats:    Chars: In=8, Out=8 | Overrides: [{'kannada': 'ಬೆಂಗಳೂರು', 'devanagari': 'बेंगलूरु'}]
+--------------------------------------------------
+Test #4: Multi-word Phrase Override Check -> PASSED
+  Input:    ನನ್ನ ಊರು ಮೈಸೂರು.
+  Output:   नन्न ऊरु मैसूरु।
+  Expected: मैसूरु
+  Stats:    Chars: In=16, Out=16 | Overrides: [{'kannada': 'ಮೈಸೂರು', 'devanagari': 'मैसूरु'}]
+--------------------------------------------------
+Test #5: Kannada Alphabet Vowels -> PASSED
+  Input:    ಅ ಆ ಇ ಈ ಉ ಊ ಋ ಎ ಏ ಐ ಒ ಓ ಔ ಅಂ ಅಃ
+  Output:   अ आ इ ई उ ऊ ऋ ऎ ए ऐ ऒ ओ औ अं अः
+  Expected: अ आ इ ई उ ऊ ऋ ऎ ए ऐ ऒ ओ औ अं अः
+  Stats:    Chars: In=31, Out=31 | Overrides: []
+--------------------------------------------------
+Test #6: Consonants ka-kha-ga-gha-nga -> PASSED
+  Input:    ಕ ಖ ಗ ಘ ಙ
+  Output:   क ख ग घ ङ
+  Expected: क ख ग घ ङ
+  Stats:    Chars: In=9, Out=9 | Overrides: []
+--------------------------------------------------
+Test #7: Sentence with Punctuation -> PASSED
+  Input:    ನಿಮ್ಮ ಹೆಸರೇನು? ನನ್ನ ಹೆಸರು ರಮೇಶ್.
+  Output:   निम्म हॆसरेनु? नन्न हॆसरु रमेश्।
+  Expected: निम्म हॆसरेनु? नन्न हॆसरु रमेश्।
+  Stats:    Chars: In=32, Out=32 | Overrides: []
+--------------------------------------------------
+Test #8: Mixed Script: Kannada + English -> PASSED
+  Input:    FastAPI ಮತ್ತು React ಬಳಸಿ Kannada-to-Devanagari transliteration app.
+  Output:   FastAPI मत्तु React बळसि Kannada-to-Devanagari transliteration app।
+  Expected: FastAPI
+  Stats:    Chars: In=67, Out=67 | Overrides: []
+--------------------------------------------------
+Test #9: Mixed Script: Numbers & Dates -> PASSED
+  Input:    ದಿನಾಂಕ 15 August 2026 ರಂದು 100% ಯಶಸ್ಸು.
+  Output:   दिनांक 15 August 2026 रंदु 100% यशस्सु।
+  Expected: 15 August 2026
+  Stats:    Chars: In=39, Out=39 | Overrides: []
+--------------------------------------------------
+Test #10: Conjunct Consonants (Otthakshara) -> PASSED
+  Input:    ಸಂಸ್ಕೃತ ಮತ್ತು ಕನ್ನಡ ಸಾಹಿತ್ಯ
+  Output:   संस्कृत मत्तु कन्नड साहित्य
+  Expected: संस्कृत मत्तु कन्नड साहित्य
+  Stats:    Chars: In=27, Out=27 | Overrides: []
+--------------------------------------------------
+Test #11: Literature Quote -> PASSED
+  Input:    ಸಿರಿಗನ್ನಡಂ ಗೆಲ್ಗೆ, ಸಿರಿಗನ್ನಡಂ ಬಾಳ್ಗೆ.
+  Output:   सिरिगन्नडं गॆल्गॆ, सिरिगन्नडं बाळ्गॆ।
+  Expected: सिरिगन्नडं गॆल्गॆ
+  Stats:    Chars: In=37, Out=37 | Overrides: []
+--------------------------------------------------
+Test #12: Numbers & Symbols -> PASSED
+  Input:    ₹500 ಬೆಲೆ (10 kg bag)
+  Output:   ₹500 बॆलॆ (10 kg bag)
+  Expected: ₹500
+  Stats:    Chars: In=21, Out=21 | Overrides: []
+--------------------------------------------------
+
+SUMMARY: 12/12 passed, 0 failed.
