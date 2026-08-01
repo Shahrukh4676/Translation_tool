@@ -1,0 +1,8 @@
+services:
+  # Docker container hosting both frontend and backend
+  - type: web
+    name: akshara-translator
+    env: docker
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    plan: free # Can be upgraded as needed

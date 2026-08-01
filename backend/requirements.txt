@@ -10,3 +10,5 @@ python-docx==1.1.0
 pytest==8.1.1
 slowapi==0.1.9
 locust==2.26.0
+numpy==1.26.4
+
